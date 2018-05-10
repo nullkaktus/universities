@@ -3,15 +3,15 @@ import * as PostController from '../controllers/post.controller';
 const router = new Router();
 
 // Get all Posts
-router.route('/posts').get(PostController.getPosts);
+router.route('/posts').get(PostController.getUniversities);
 
 // Get one post by cuid
-router.route('/posts/:cuid').get(PostController.getPost);
+router.route('/posts/:cuid').get(PostController.getUniversity);
 
 // Add a new Post
-router.route('/posts').post(PostController.addPost);
+router.route('/posts').post(PostController.addUniversity);
 
 // Delete a post by cuid
-router.route('/posts/:cuid').delete(PostController.deletePost);
+router.route('/posts/:cuid').delete(PostController.deleteUniversity);
 
 export default router;

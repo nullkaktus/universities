@@ -1,6 +1,5 @@
-import Post from '../models/post';
+import University from '../models/university';
 import cuid from 'cuid';
-import slug from 'limax';
 import sanitizeHtml from 'sanitize-html';
 
 /**
@@ -9,8 +8,8 @@ import sanitizeHtml from 'sanitize-html';
  * @param res
  * @returns void
  */
-export function getPosts(req, res) {
-  Post.find().sort('-dateAdded').exec((err, posts) => {
+export function getUniversities(req, res) {
+  University.find().sort('-dateAdded').exec((err, posts) => {
     if (err) {
       res.status(500).send(err);
     }
@@ -24,25 +23,23 @@ export function getPosts(req, res) {
  * @param res
  * @returns void
  */
-export function addPost(req, res) {
-  if (!req.body.post.name || !req.body.post.title || !req.body.post.content) {
+export function addUniversity(req, res) {
+  if (!req.body.university.name || !req.body.university.country || !req.body.university.city) {
     res.status(403).end();
   }
 
-  const newPost = new Post(req.body.post);
+  const newUniversity = new University(req.body.university);
 
   // Let's sanitize inputs
-  newPost.title = sanitizeHtml(newPost.title);
-  newPost.name = sanitizeHtml(newPost.name);
-  newPost.content = sanitizeHtml(newPost.content);
-
-  newPost.slug = slug(newPost.title.toLowerCase(), { lowercase: true });
-  newPost.cuid = cuid();
-  newPost.save((err, saved) => {
+  newUniversity.name = sanitizeHtml(newUniversity.name);
+  newUniversity.country = sanitizeHtml(newUniversity.country);
+  newUniversity.city = sanitizeHtml(newUniversity.city);
+  newUniversity.cuid = cuid();
+  newUniversity.save((err, saved) => {
     if (err) {
       res.status(500).send(err);
     }
-    res.json({ post: saved });
+    res.json({ university: saved });
   });
 }
 
@@ -52,12 +49,12 @@ export function addPost(req, res) {
  * @param res
  * @returns void
  */
-export function getPost(req, res) {
-  Post.findOne({ cuid: req.params.cuid }).exec((err, post) => {
+export function getUniversity(req, res) {
+  University.findOne({ cuid: req.params.cuid }).exec((err, uni) => {
     if (err) {
       res.status(500).send(err);
     }
-    res.json({ post });
+    res.json({ uni });
   });
 }
 
@@ -67,13 +64,13 @@ export function getPost(req, res) {
  * @param res
  * @returns void
  */
-export function deletePost(req, res) {
-  Post.findOne({ cuid: req.params.cuid }).exec((err, post) => {
+export function deleteUniversity(req, res) {
+  University.findOne({ cuid: req.params.cuid }).exec((err, uni) => {
     if (err) {
       res.status(500).send(err);
     }
 
-    post.remove(() => {
+    uni.remove(() => {
       res.status(200).end();
     });
   });
