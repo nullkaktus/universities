@@ -15,11 +15,11 @@ import { getPost } from '../../PostReducer';
 export function PostDetailPage(props) {
   return (
     <div>
-      <Helmet title={props.post.title} />
+      <Helmet title={props.post.name} />
       <div className={`${styles['single-post']} ${styles['post-detail']}`}>
-        <h3 className={styles['post-title']}>{props.post.title}</h3>
-        <p className={styles['author-name']}><FormattedMessage id="by" /> {props.post.name}</p>
-        <p className={styles['post-desc']}>{props.post.content}</p>
+        <h3 className={styles['post-title']}>{props.post.name}</h3>
+        <p className={styles['author-name']}> {props.post.country}</p>
+        <p className={styles['post-desc']}>{props.post.city}</p>
       </div>
     </div>
   );
@@ -40,8 +40,8 @@ function mapStateToProps(state, props) {
 PostDetailPage.propTypes = {
   post: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    content: PropTypes.string.isRequired,
+    country: PropTypes.string.isRequired,
+    city: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
     cuid: PropTypes.string.isRequired,
   }).isRequired,

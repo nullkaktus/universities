@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
-import { FormattedMessage } from 'react-intl';
 
 // Import Style
 import styles from './PostListItem.css';
@@ -10,10 +9,9 @@ function PostListItem(props) {
     <div className={styles['single-post']}>
       <h3 className={styles['post-title']}>
         <Link to={`/posts/${props.post.slug}-${props.post.cuid}`} >
-          {props.post.title}
+          {props.post.name}
         </Link>
       </h3>
-      <p className={styles['author-name']}>{props.post.name}</p>
       <p className={styles['post-desc']}>{props.post.country}, {props.post.city}</p>
       <hr className={styles.divider} />
     </div>
