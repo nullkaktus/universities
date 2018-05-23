@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 // Import Components
 import PostList from '../../components/PostList';
 import PostCreateWidget from '../../components/PostCreateWidget/PostCreateWidget';
+import SearchFilter from '../../components/Search/SearchFilter';
 
 // Import Actions
 import { addPostRequest, fetchPosts, deletePostRequest } from '../../PostActions';
@@ -34,6 +35,7 @@ class PostListPage extends Component {
     return (
       <div>
         <PostCreateWidget addPost={this.handleAddPost} showAddPost={this.props.showAddPost} />
+        <SearchFilter />
         <PostList handleDeletePost={this.handleDeletePost} posts={this.props.posts} />
       </div>
     );

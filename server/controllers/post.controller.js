@@ -17,6 +17,22 @@ export function getUniversities(req, res) {
   });
 }
 
+// Not checked if it is working
+/**
+ * Get universities by country
+ * @param req
+ * @param res
+ * @returns void
+ */
+export function getUniByCountry(req, res) {
+  University.find({ country: req }).exec((err, posts) => {
+    if (err) {
+      res.status(500).send(err);
+    }
+    res.json({ posts });
+  });
+}
+
 /**
  * Save a post
  * @param req

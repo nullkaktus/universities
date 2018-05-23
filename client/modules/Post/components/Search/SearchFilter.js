@@ -1,46 +1,40 @@
 import React, { Component } from 'react';
-import Suggestions from '../../components/Search';
+import Button from '@material-ui/core/Button';
+
 
 class SearchFilter extends Component {
 
-  state = {
-    query: '',
-    results: [],
+  constructor(props) {
+    super(props);
+    this.state = { value: 'coconut' };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  getInfo = () => {
-    this.setState({
-      results: []
-    });
+  handleChange(event) {
+    this.setState({ value: event.target.value });
   }
 
-  handleInputChange = () => {
-    this.setState({
-      query: this.search.value
-    });
-  }
-
-  handleInputChange = () => {
-    this.setState({
-      query: this.search.value
-    }, () => {
-      if (this.state.query && this.state.query.length > 1) {
-        if (this.state.query.length % 2 === 0) {
-          this.getInfo();
-        }
-      }
-    });
+  handleSubmit(event) {
+    alert(this.state.value);
+    event.preventDefault();
   }
 
   render() {
     return (
-      <form>
-        <input
-          placeholder="Search for..."
-          ref={input => (this.search = input)}
-          onChange={this.handleInputChange}
-        />
-        <Suggestions results={this.state.results} />
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Pick a country:
+          <select value={this.state.value} onChange={this.handleChange}>
+            <option value="grapefruit">Switzerland</option>
+            <option value="lime">Russia</option>
+            <option value="coconut">USA</option>
+          </select>
+        </label>
+        <Button variant="raised" color="primary" onClick={this.handleSubmit}>
+          Search
+        </Button>
       </form>
     );
   }
