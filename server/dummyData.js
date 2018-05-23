@@ -1,5 +1,4 @@
 import University from './models/university';
-import fs from 'fs';
 
 
 export default function () {
