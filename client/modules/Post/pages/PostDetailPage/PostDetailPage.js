@@ -42,7 +42,6 @@ PostDetailPage.propTypes = {
     name: PropTypes.string.isRequired,
     country: PropTypes.string.isRequired,
     city: PropTypes.string.isRequired,
-    slug: PropTypes.string.isRequired,
     cuid: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired,
   }).isRequired,

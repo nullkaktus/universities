@@ -1,12 +1,15 @@
-import React, { Component } from 'react';
+import React, { PropTypes, Component } from 'react';
+import { connect } from 'react-redux';
+
 import Button from '@material-ui/core/Button';
 
+import { searchUniByCountry } from '../../PostActions';
 
 class SearchFilter extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { value: 'coconut' };
+    this.state = { value: 'Russia' };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,9 +19,12 @@ class SearchFilter extends Component {
     this.setState({ value: event.target.value });
   }
 
-  handleSubmit(event) {
-    alert(this.state.value);
+  handleSubmit = (country) => {
+    this.props.dispatch(searchUniByCountry(this.state.value));
+    alert(country);
     event.preventDefault();
+    // this.props.dispatch(toggleAddPost());
+    // this.props.dispatch(searchUniByCountry({ country }));
   }
 
   render() {
@@ -27,9 +33,9 @@ class SearchFilter extends Component {
         <label>
           Pick a country:
           <select value={this.state.value} onChange={this.handleChange}>
-            <option value="grapefruit">Switzerland</option>
-            <option value="lime">Russia</option>
-            <option value="coconut">USA</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="Russia">Russia</option>
+            <option value="USA">USA</option>
           </select>
         </label>
         <Button variant="raised" color="primary" onClick={this.handleSubmit}>
@@ -40,4 +46,9 @@ class SearchFilter extends Component {
   }
 }
 
-export default SearchFilter;
+
+SearchFilter.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+};
+
+export default connect(null)(SearchFilter);

@@ -14,4 +14,8 @@ router.route('/posts').post(PostController.addUniversity);
 // Delete a post by cuid
 router.route('/posts/:cuid').delete(PostController.deleteUniversity);
 
+// Show unis by country
+router.route('/posts/:country').get(PostController.getUniByCountry);
+
+
 export default router;

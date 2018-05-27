@@ -8,7 +8,7 @@ function PostListItem(props) {
   return (
     <div className={styles['single-post']}>
       <h3 className={styles['post-title']}>
-        <Link to={`/posts/${props.post.slug}-${props.post.cuid}`} >
+        <Link to={`/posts/${props.post.cuid}`} >
           {props.post.name}
         </Link>
       </h3>
@@ -21,10 +21,8 @@ function PostListItem(props) {
 PostListItem.propTypes = {
   post: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
     country: PropTypes.string.isRequired,
     city: PropTypes.string.isRequired,
-    slug: PropTypes.string.isRequired,
     cuid: PropTypes.string.isRequired,
   }).isRequired,
   onDelete: PropTypes.func.isRequired,

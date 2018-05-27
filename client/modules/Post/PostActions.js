@@ -53,7 +53,6 @@ export function deletePost(cuid) {
   };
 }
 
-//not finished - not working here and not wired anywhere
 export function searchUniByCountry(country) {
   return (dispatch) => {
     return callApi(`posts/${country}`).then(res => dispatch(searchUniByCountry(res.post)));

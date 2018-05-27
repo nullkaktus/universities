@@ -25,7 +25,7 @@ export function getUniversities(req, res) {
  * @returns void
  */
 export function getUniByCountry(req, res) {
-  University.find({ country: req }).exec((err, posts) => {
+  University.find({ country: req.body.value }).exec((err, posts) => {
     if (err) {
       res.status(500).send(err);
     }
