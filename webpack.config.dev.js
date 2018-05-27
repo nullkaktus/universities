@@ -6,6 +6,10 @@ var postcssReporter = require('postcss-reporter');
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
 
+  devServer: {
+    historyApiFallback: true,
+  },
+
   entry: {
     app: [
       'eventsource-polyfill',

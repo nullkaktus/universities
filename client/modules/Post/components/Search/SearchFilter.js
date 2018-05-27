@@ -21,7 +21,7 @@ class SearchFilter extends Component {
 
   handleSubmit = (country) => {
     this.props.dispatch(searchUniByCountry(this.state.value));
-    alert(country);
+    console.log(this.state.value);
     event.preventDefault();
     // this.props.dispatch(toggleAddPost());
     // this.props.dispatch(searchUniByCountry({ country }));

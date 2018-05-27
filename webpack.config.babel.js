@@ -12,6 +12,9 @@ module.exports = {
     publicPath: '/',
     libraryTarget: 'commonjs2',
   },
+  devServer: {
+    historyApiFallback: true,
+  },
   resolve: {
     extensions: ['', '.js', '.jsx'],
     modules: [

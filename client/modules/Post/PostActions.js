@@ -54,6 +54,7 @@ export function deletePost(cuid) {
 }
 
 export function searchUniByCountry(country) {
+  console.log('PostActions ' + country);
   return (dispatch) => {
     return callApi(`posts/${country}`).then(res => dispatch(searchUniByCountry(res.post)));
   };

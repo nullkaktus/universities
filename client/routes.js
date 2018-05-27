@@ -39,5 +39,13 @@ export default (
         });
       }}
     />
+    <Route
+      path="/posts/:country"
+      getComponent={(nextState, cb) => {
+        require.ensure([], require => {
+          cb(null, require('./modules/Post/pages/UniSearchPage/UniSearchPage').default);
+        });
+      }}
+    />
   </Route>
 );
