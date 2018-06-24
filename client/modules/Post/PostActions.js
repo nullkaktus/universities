@@ -13,6 +13,7 @@ export function addPost(post) {
   };
 }
 
+/*
 export function addPostRequest(post) {
   return (dispatch) => {
     return callApi('posts', 'post', {
@@ -24,6 +25,7 @@ export function addPostRequest(post) {
     }).then(res => dispatch(addPost(res.post)));
   };
 }
+*/
 
 export function addPosts(posts) {
   return {
@@ -40,6 +42,7 @@ export function fetchPosts() {
   };
 }
 
+/*
 export function fetchPost(cuid) {
   return (dispatch) => {
     return callApi(`posts/${cuid}`).then(res => dispatch(addPost(res.post)));
@@ -53,15 +56,18 @@ export function deletePost(cuid) {
   };
 }
 
-export function searchUniByCountry(country) {
+/* export function searchUniByCountry(country) {
   console.log('PostActions ' + country);
   return (dispatch) => {
     return callApi(`posts/${country}`).then(res => dispatch(searchUniByCountry(res.post)));
   };
 }
 
+
 export function deletePostRequest(cuid) {
   return (dispatch) => {
     return callApi(`posts/${cuid}`, 'delete').then(() => dispatch(deletePost(cuid)));
   };
 }
+
+*/

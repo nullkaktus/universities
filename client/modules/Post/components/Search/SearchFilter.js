@@ -2,25 +2,31 @@ import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 
 import Button from '@material-ui/core/Button';
+import Select from 'react-select';
+import 'react-select/dist/react-select.css';
 
-import { searchUniByCountry } from '../../PostActions';
+// import { searchUniByCountry } from '../../PostActions';
 
 class SearchFilter extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { value: 'Russia' };
+    this.state = { selectValue: 'Russia' };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({ value: event.target.value });
+  handleChange= (selectValue) => {
+    this.setState({ selectValue });
+    // selectedOption can be null when the `x` (close) button is clicked
+    if (selectValue) {
+      console.log(`Selected: ${selectValue.label}`);
+    }
   }
 
-  handleSubmit = (country) => {
-    this.props.dispatch(searchUniByCountry(this.state.value));
+  handleSubmit(event) {
+    // this.props.dispatch(searchUniByCountry(this.state.value));
     console.log(this.state.value);
     event.preventDefault();
     // this.props.dispatch(toggleAddPost());
@@ -29,19 +35,22 @@ class SearchFilter extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Pick a country:
-          <select value={this.state.value} onChange={this.handleChange}>
-            <option value="Switzerland">Switzerland</option>
-            <option value="Russia">Russia</option>
-            <option value="USA">USA</option>
-          </select>
-        </label>
-        <Button variant="raised" color="primary" onClick={this.handleSubmit}>
+      <div className="section">
+        <h3 className="section-heading">Pick a country:</h3>
+        <Select
+          value={this.state.selectValue}
+          onChange={this.handleChange}
+          onSelectResetsInput={false}
+          options={[
+            { value: 'Switzerland', label: 'Switzerland' },
+            { value: 'Russia', label: 'Russia' },
+            { value: 'Andorra', label: 'Andorra' },
+          ]}
+        />
+        <Button variant="raised" color="primary" onClick={() => this.setState({ selectValue: event.target.value })}>
           Search
         </Button>
-      </form>
+      </div>
     );
   }
 }
