@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 
-// import { searchUniByCountry } from '../../PostActions';
+import { searchUniByCountry } from '../../PostActions';
 
 class SearchFilter extends Component {
 
@@ -25,9 +25,10 @@ class SearchFilter extends Component {
     }
   }
 
-  handleSubmit(event) {
-    // this.props.dispatch(searchUniByCountry(this.state.value));
-    console.log(this.state.value);
+  handleSubmit() {
+    console.log('handle Submit');
+    this.props.dispatch(searchUniByCountry(this.state.selectValue.value));
+    console.log(this.state.selectValue);
     event.preventDefault();
     // this.props.dispatch(toggleAddPost());
     // this.props.dispatch(searchUniByCountry({ country }));
@@ -47,7 +48,7 @@ class SearchFilter extends Component {
             { value: 'Andorra', label: 'Andorra' },
           ]}
         />
-        <Button variant="raised" color="primary" onClick={() => this.setState({ selectValue: event.target.value })}>
+        <Button variant="raised" color="primary" onClick={this.handleSubmit}>
           Search
         </Button>
       </div>

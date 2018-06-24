@@ -55,15 +55,16 @@ export function deletePost(cuid) {
     cuid,
   };
 }
+*/
 
-/* export function searchUniByCountry(country) {
+export function searchUniByCountry(country) {
   console.log('PostActions ' + country);
   return (dispatch) => {
     return callApi(`posts/${country}`).then(res => dispatch(searchUniByCountry(res.post)));
   };
 }
 
-
+/*
 export function deletePostRequest(cuid) {
   return (dispatch) => {
     return callApi(`posts/${cuid}`, 'delete').then(() => dispatch(deletePost(cuid)));

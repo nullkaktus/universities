@@ -33,5 +33,8 @@ export const getPosts = state => state.posts.data;
 // Get post by cuid
 export const getPost = (state, cuid) => state.posts.data.filter(post => post.cuid === cuid)[0];
 
+// Get post by country
+export const getPostCountry = (state, country) => state.posts.data.filter(post => post.country === country);
+
 // Export Reducer
 export default PostReducer;
