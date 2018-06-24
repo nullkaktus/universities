@@ -1,0 +1,25 @@
+Agricultural University of Tirana,Albania,http://www.ubt.edu.al,Tiranë
+Albanian University,Albania,http://www.albanianuniversity.edu.al,Tiranë
+Aldent University,Albania,http://www.ual.edu.al,Tiranë
+Aleksandër Moisiu University of Durres,Albania,http://www.uamd.edu.al,City:
+Aleksandër Xhuvani University of Elbasan,Albania,http://www.uniel.edu.al,Elbasan
+Canadian Institute of Technology,Albania,http://www.cit.edu.al/,Tiranë
+Epoka University,Albania,http://www.epoka.edu.al,Tiranë
+Eqrem Çabej University of Gjirokstra,Albania,http://www.uogj.edu.al,Gjirokstër
+European University in Tirana,Albania,http://www.uet.edu.al,Tiranë
+Fan S. Noli  University  Korce,Albania,http://www.unkorce.edu.al,Korçë
+Hëna e Plotë (Bedër) University,Albania,http://beder.edu.al/,Tiranë
+Luarasi University,Albania,http://www.luarasi-univ.edu.al,Tiranë
+Luigj Gurakuqi University of Shkodra,Albania,http://www.unishk.edu.al,Shkodër
+Marin Barleti University,Albania,http://www.umb.edu.al,Tiranë
+Medical University, Tirana,Albania,http://www.umed.edu.al,Tiranë
+Our Lady of Good Counsel Catholic University,Albania,http://www.unizkm.edu.al,City:
+POLIS University,Albania,http://www.universitetipolis.edu.al,Tiranë
+Polytechnic University of Tirana,Albania,http://www.upt.al,Tiranë
+Tirana University of Sport,Albania,http://www.ust.edu.al,Tiranë
+University of Arts,Albania,http://www.artacademy.al,City:
+University of New York at Tirana,Albania,http://www.unyt.edu.al,Tiranë
+University of Tirana,Albania,http://www.unitir.edu.al,City:
+University of Vlora 'Ismail Qemali',Albania,http://univlora.edu.al,Vlorë
+Open University of La Salle,Andorra,http://www.uols.org,City:
+University of Andorra,Andorra,http://www.uda.ad,Sant Julià de Lòria
