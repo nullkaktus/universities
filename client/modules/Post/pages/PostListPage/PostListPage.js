@@ -16,6 +16,12 @@ import { getPosts, getPostCountry } from '../../PostReducer';
 // !! imported selector from PostReducer here. Probably can use it to select universities by country. Not yet implemented.
 
 class PostListPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { country: '' };
+    this.list = this.props.posts;
+  }
+
   componentDidMount() {
     this.props.dispatch(fetchPosts());
   }
@@ -32,12 +38,21 @@ class PostListPage extends Component {
     this.props.dispatch(addPostRequest({ name, title, content }));
   };
 
+  handleCountry = (countryValue) => {
+    console.log('PostListPage ' + countryValue);
+    this.setState({ country: countryValue });
+    this.list = this.props.posts;
+    if (countryValue !== '') {
+      this.list = this.props.posts.filter(p => p.country === countryValue);
+    }
+  }
+
   render() {
     return (
       <div>
         <PostCreateWidget addPost={this.handleAddPost} showAddPost={this.props.showAddPost} />
-        <SearchFilter />
-        <PostList handleDeletePost={this.handleDeletePost} posts={this.props.posts} />
+        <SearchFilter onSelectCountry={this.handleCountry} />
+        <PostList handleDeletePost={this.handleDeletePost} posts={this.list} />
       </div>
     );
   }
