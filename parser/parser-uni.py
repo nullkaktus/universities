@@ -3,7 +3,12 @@ import requests
 
 url = 'http://whed.net/results_institutions.php'
 page = requests.get('http://whed.net/search_by_region.php?region=Europe')
-#countries = ["Albania", "Andorra", "Armenia", "Austria", "Belarus", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Iceland", "Ireland", "Italy"]
+#countries_europe = ["Albania", "Andorra", "Armenia", "Austria", "Belarus", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Georgia", "Germany", "Greece", "Hungary", "Iceland", "Ireland", "Italy",
+# "Latvia", "Lithuania", "Malta", "Monaco", "Montenegro", "Netherlands", "Norway", "Poland", "Portugal", "Romania", "Russian Federation", "San Marino", "Serbia", "Slovenia", "Spain", "Sweden", "Switzerland", "Turkey", "Ukraine", "United Kingdom"]
+
+#countries_america = ["Canada", "Mexico", "United States of America", "Argentina", "Aruba", "Bahamas", "Barbados", "Brazil", "Chile", "Colombia", "Cuba", "Ecuador", "Grenada", "Guatemala", "Honduras", "Jamaica", "Nicaragua", "Panama", "Paraguay", "Peru", "Uruguay"]
+#countries_africa = ["Algeria", "Angola", "Benin", "Botswana", "Burundi", "Cameroon"]
+
 countries = ["Albania", "Andorra"]
 
 f = open('helloworld.txt','w')
