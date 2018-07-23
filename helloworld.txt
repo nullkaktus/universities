@@ -23,3 +23,105 @@ University of Tirana,Albania,http://www.unitir.edu.al,City:
 University of Vlora 'Ismail Qemali',Albania,http://univlora.edu.al,Vlorë
 Open University of La Salle,Andorra,http://www.uols.org,City:
 University of Andorra,Andorra,http://www.uda.ad,Sant Julià de Lòria
+American University of Armenia,Armenia,http://www.aua.am,Yerevan
+Armenian Medical Institute,Armenia,http://www.armedin.com/,Yerevan
+Armenian State Agrarian University,Armenia,http://www.anau.am/,Yerevan
+Armenian State Institute of Physical Culture,Armenia,http://www.asipc.am,Yerevan
+Armenian State Pedagogical University After Khachatur Abovyan,Armenia,http://www.armspu.am,Yerevan
+Armenian State University of Economics,Armenia,http://www.asue.am,Yerevan
+Armenian State University of Economics – Gyumri Branch,Armenia,http://www.asue.am/en/about-asue/branches/gyumri-branch-249,Gyumri
+Armenian State University of Economics – Yeghegnadzor Branch,Armenia,http://www.asue.am/en/about-asue/branches/yeghegnadzor-branch-248,Yeghegnadzor
+Armenian-Russian International University Mkhitar Gosh,Armenia,http://www.mkhitargosh.com,Vanadzor
+Crisis Management State Academy of the Emergency Situations of the Republic of Armenia,Armenia,http://www.mes.am/en/home/95-subdivisions/390-2013-07-25-14-53-03,Yerevan
+Eurasia International University,Armenia,http://www.eiu.am/,City:
+European Regional Educational Academy,Armenia,http://www.eriicta.am,City:
+Financial Academy,Armenia,http://www.finacademy.am,Yerevan
+French University of Armenia,Armenia,http://www.ufar.am,Yerevan
+Gavar State University,Armenia,http://gsu.am,Gavar
+Goris State University,Armenia,http://www.gorsu.am,Goris
+Gyumri Progress University,Armenia,http://progress-hamalsaran.am,Gyumri
+Gyumri State Pedagogical Institute named after M. Nalbandian,Armenia,http://www.gspi.am,Gyumri
+Hrazdan Institute of Humanities,Armenia,http://www.hinstitute.am,City:
+International Accountancy Training Center,Armenia,http://www.iatc.am/,City:
+International Scientific-Educational Center of the National Academy of Sciences of Republic of Armenia,Armenia,http://www.isec.am,Yerevan
+National Academy of Fine Arts,Armenia,http://www.education.am/english/education/NAFA.htm,Yerevan
+National Polytechnic University of Armenia,Armenia,http://polytech.am,Yerevan
+National University of Architecture and Construction of Armenia,Armenia,http://nuaca.am,Yerevan
+Northern University,Armenia,http://www.northern.am/en/,Yerevan
+Public Administration Academy of Republic of Armenia,Armenia,http://paara.am,Yerevan
+Russian-Armenian (Slavonic) University,Armenia,http://www.rau.am,Yerevan
+University of Economy and Law named after Avetik Mkrtchyan,Armenia,http://www.mtih.am,Yerevan
+University of Practical Psychology and Sociology Urartu,Armenia,http://www.urartuuniversity.com,Yerevan
+University of Traditional Medicine,Armenia,http://www.tradmed-uni.am/,Yerevan
+USEL University,Armenia,http://www.usel.am,Yerevan
+Vanadzor State University named after Hovhannes Toumanyan,Armenia,http://www.vspi.am,Vanadzor
+Yerevan Agricultural University,Armenia,http://www.yau.am,Yerevan
+Yerevan Armenian Open University Named after Loris Khalashyan,Armenia,http://www.academedu.org,Yerevan
+Yerevan Galik University,Armenia,http://galick.do.am/,Yerevan
+Yerevan Gladzor University,Armenia,http://www.gladzor.am,Yerevan
+Yerevan Haybusak University,Armenia,http://www.haybusak.org,Yerevan
+Yerevan Martig University of International Economic Relations,Armenia,http://uier-edu.am,Yerevan
+Yerevan State Academy of Fine Arts,Armenia,http://www.yafa.am,Yerevan
+Yerevan State Academy of Fine Arts – Gyumri Branch,Armenia,http://www.yafa.am/en/?page_id=1603,Gyumri
+Yerevan State Conservatory after Komitas,Armenia,http://www.conservatory.am,Yerevan
+Yerevan State Institute of Theatre and Cinema,Armenia,http://www.ysitc.am,Yerevan
+Yerevan State Linguistic University named after V. Brusov,Armenia,http://www.brusov.am/index.php,Yerevan
+Yerevan State Medical University named after M. Heratsi,Armenia,http://www.ysmu.am,Yerevan
+Yerevan State University,Armenia,http://www.ysu.am,Yerevan
+Yerevan University Named after Movses Khorenatsi,Armenia,http://www.mkhu.am,City:
+Academy of Fine Arts Vienna,Austria,http://www.akbild.ac.at,Wien
+Anton Bruckner University,Austria,http://www.bruckneruni.at,Linz
+Campus 02 University of Applied Sciences,Austria,http://www.campus02.at,Graz
+Campus Vienna University of Applied Sciences,Austria,http://www.fh-campuswien.ac.at,Wien
+Catholic Theological Private University Linz,Austria,http://www.ktu-linz.ac.at,Linz
+Danube Private University,Austria,http://www.danube-private-university.at/,Krems-Stein
+Danube University Krems,Austria,http://www.donau-uni.ac.at,Krems
+Ferdinand Porsche FernFH,Austria,http://www.fernfh.ac.at/,Wien
+FHWien University of Applied Sciences,Austria,http://www.fh-wien.ac.at,Wien
+Graz University of Technology,Austria,http://www.tugraz.at/,Graz
+IMC University of Applied Sciences of Krems,Austria,http://www.fh-krems.ac.at/,Krems
+Johannes Kepler University Linz,Austria,http://www.jku.at,Linz
+Karl Landsteiner Private University of Health Sciences,Austria,http://www.kl.ac.at/,Krems
+Klagenfurt University,Austria,http://www.uni-klu.ac.at,Klagenfurt
+Lauder Business School, University of Applied Sciences,Austria,http://www.lbs.ac.at,Wien
+Management Center Innsbruck,Austria,http://www.mci.edu,Innsbruck
+Medical University of Graz,Austria,http://www.meduni-graz.at,Graz
+Medical University of Innsbruck,Austria,http://www.i-med.ac.at,City:
+Medical University of Vienna,Austria,http://www.meduniwien.ac.at/,Wien
+MODUL University Vienna,Austria,http://www.modul.ac.at/,City:
+New Design University,Austria,http://www.ndu.ac.at,St. Pölten
+Paracelsus Private Medical University,Austria,http://www.pmu.ac.at,Salzburg
+Private University for Health Sciences, Medical Informatics and Techniques,Austria,http://www.umit.at,Hall
+Private University Seeburg Castle,Austria,http://www.uni-seeburg.at/,Seekirchen am Wallersee
+Sigmund Freud Private University of Vienna,Austria,http://sfu.ac.at/,Wien
+Technikum Vienna University of Applied Sciences,Austria,http://www.technikum-wien.at,Wien
+University Mozarteum Salzburg,Austria,http://www.moz.ac.at,Salzburg
+University of Applied Arts Vienna,Austria,http://www.dieangewandte.at/,Wien
+University of Applied Sciences for Health - Tyrol,Austria,https://www.fhg-tirol.ac.at,City:
+University of Applied Sciences for Health Professions - Upper Austria,Austria,http://www.fh-gesundheitsberufe.at/index.php?id=home&L=2,Linz
+University of Applied Sciences of Bfi Vienna,Austria,http://www.fh-vie.ac.at,Wien
+University of Applied Sciences of Burgenland,Austria,http://www.fh-burgenland.at,Eisenstadt
+University of Applied Sciences of Carinthia,Austria,http://www.fh-kaernten.at/,Spittal an der Drau
+University of Applied Sciences of Joanneum,Austria,http://www.fh-joanneum.at,City:
+University of Applied Sciences of Kufstein Tirol,Austria,http://www.fh-kufstein.ac.at,Kufstein
+University of Applied Sciences of Salzburg,Austria,http://www.fh-salzburg.ac.at,Puch
+University of Applied Sciences of St. Pölten,Austria,https://www.fhstp.ac.at/en,St. Pölten
+University of Applied Sciences of Vorarlberg,Austria,http://www.fhv.at,Dornbirn
+University of Applied Sciences Wiener Neustadt,Austria,http://www.fhwn.ac.at,Wiener Neustadt
+University of Art and Industrial Design Linz,Austria,http://www.ufg.ac.at,Linz
+University of Graz,Austria,http://www.uni-graz.at,Graz
+University of Innsbruck,Austria,http://www.uibk.ac.at,Innsbruck
+University of Leoben,Austria,http://www.unileoben.ac.at,Leoben
+University of Music and Performing Arts Graz,Austria,http://www.kug.ac.at,City:
+University of Music and Performing Arts Vienna,Austria,http://www.mdw.ac.at,Wien
+University of Natural Resources and Applied Life Sciences, Vienna,Austria,http://www.boku.ac.at,Wien
+University of Salzburg,Austria,http://www.uni-salzburg.at,Salzburg
+University of Veterinary Medicine, Vienna,Austria,http://www.vetmeduni.ac.at,Wien
+University of Vienna,Austria,http://www.univie.ac.at,Wien
+Upper Austria University of Applied Sciences,Austria,http://www.fh-ooe.at,Wels
+Vienna Conservatoire Private University,Austria,http://www.konservatorium-wien.ac.at/,Wien
+Vienna University of Economics and Business,Austria,http://www.wu.ac.at,Wien
+Vienna University of Technology,Austria,http://www.tuwien.ac.at,Wien
+Webster University Vienna,Austria,http://www.webster.ac.at,City:
+Academy of Public Administration under the Aegis of the President of the Republic of Belarus,Belarus,http://www.pac.by/en,Minsk
+Academy of the Ministry of Internal Affairs of the Republic of Belarus,Belarus,http://www.academy.mia.by,Minsk
