@@ -12,17 +12,16 @@ class SearchFilter extends Component {
   constructor(props) {
     super(props);
     this.state = { selectValue: '',
-    clearable: true };
+      clearable: true };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange= (selectValue) => {
-
 // Attention: checking for null because of "clearable" option
     const value = selectValue === null ? '' : selectValue.value;
-    this.setState({ value });
+    this.setState({ selectValue: value });
     // selectedOption can be null when the `x` (close) button is clicked
     if (value) {
       console.log(`Selected: ${value}`);
