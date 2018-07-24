@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
+import UniMap from '../../pages/PostDetailPage/UniMap';
 
 // Import Style
 import styles from '../../components/PostListItem/PostListItem.css';
@@ -20,6 +21,12 @@ export function PostDetailPage(props) {
         <img src={props.post.img} alt="" className={styles['university-image']} />
         <p className={styles['author-name']}> {props.post.country}</p>
         <p className={styles['post-desc']}>{props.post.city}</p>
+        <UniMap
+				  googleMapURL={`http://maps.google.com/maps/api/js?sensor=false`}
+				  loadingElement={<div style={{ height: `100%` }} />}
+				  containerElement={<div style={{ height: `600px`, width: `600px` }} />}
+				  mapElement={<div style={{ height: `100%` }} />}
+			/>
       </div>
     </div>
   );
