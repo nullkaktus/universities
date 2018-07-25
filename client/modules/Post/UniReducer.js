@@ -1,9 +1,9 @@
-import { ADD_POST, ADD_POSTS, DELETE_POST } from './PostActions';
+import { ADD_POST, ADD_POSTS, DELETE_POST } from './UniActions';
 
 // Initial State
 const initialState = { data: [] };
 
-const PostReducer = (state = initialState, action) => {
+const UniReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_POST :
       return {
@@ -37,4 +37,4 @@ export const getPost = (state, cuid) => state.posts.data.filter(post => post.cui
 export const getPostCountry = (state, country) => state.posts.data.filter(post => post.country === country);
 
 // Export Reducer
-export default PostReducer;
+export default UniReducer;

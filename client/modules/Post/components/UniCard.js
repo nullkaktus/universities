@@ -20,7 +20,7 @@ const styles = {
 
 function UniCard(props) {
   const { classes } = props;
-  
+
   return (
     <div>
       <Card className={classes.card}>

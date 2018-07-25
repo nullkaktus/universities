@@ -2,16 +2,16 @@ import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 
 // Import Components
-import PostList from '../../components/PostList';
+import UniList from '../../components/UniList';
 
 // Import Actions
-import { addPostRequest, fetchPosts } from '../../PostActions';
+import { addPostRequest, fetchPosts } from '../../UniActions';
 import { toggleAddPost } from '../../../App/AppActions';
 
 // Import Selectors
-import { searchUniByCountry } from '../../PostReducer';
+import { searchUniByCountry } from '../../UniReducer';
 
-class PostListPage extends Component {
+class UniListPage extends Component {
 
   handleAddPost = (name, title, content) => {
     this.props.dispatch(toggleAddPost());
@@ -21,14 +21,14 @@ class PostListPage extends Component {
   render() {
     return (
       <div>
-        <PostList posts={this.props.posts} />
+        <UniList posts={this.props.posts} />
       </div>
     );
   }
 }
 
 // Actions required to provide data for this component to render in sever side.
-PostListPage.need = [() => { return fetchPosts(); }];
+UniListPage.need = [() => { return fetchPosts(); }];
 
 // Retrieve data from store as props
 function mapStateToProps(state, props) {
@@ -37,7 +37,7 @@ function mapStateToProps(state, props) {
   };
 }
 
-PostListPage.propTypes = {
+UniListPage.propTypes = {
   posts: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
@@ -46,8 +46,8 @@ PostListPage.propTypes = {
   dispatch: PropTypes.func.isRequired,
 };
 
-PostListPage.contextTypes = {
+UniListPage.contextTypes = {
   router: React.PropTypes.object,
 };
 
-export default connect(mapStateToProps)(PostListPage);
+export default connect(mapStateToProps)(UniListPage);

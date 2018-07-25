@@ -6,7 +6,7 @@ import Select from 'react-select';
 // first build with commented out css file. TODO: configure to fix initial built
 import 'react-select/dist/react-select.css';
 
-import { searchUniByCountry } from '../../PostActions';
+import { searchUniByCountry } from '../../UniActions';
 
 class SearchFilter extends Component {
 

@@ -2,9 +2,9 @@ import React, { Component, PropTypes } from 'react';
 import { injectIntl, intlShape, FormattedMessage } from 'react-intl';
 
 // Import Style
-import styles from './PostCreateWidget.css';
+import styles from './UniCreateWidget.css';
 
-export class PostCreateWidget extends Component {
+export class UniCreateWidget extends Component {
   addPost = () => {
     const nameRef = this.refs.name;
     const titleRef = this.refs.title;
@@ -31,10 +31,10 @@ export class PostCreateWidget extends Component {
   }
 }
 
-PostCreateWidget.propTypes = {
+UniCreateWidget.propTypes = {
   addPost: PropTypes.func.isRequired,
   showAddPost: PropTypes.bool.isRequired,
   intl: intlShape.isRequired,
 };
 
-export default injectIntl(PostCreateWidget);
+export default injectIntl(UniCreateWidget);

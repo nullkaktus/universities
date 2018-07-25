@@ -2,9 +2,9 @@ import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 
 // Import Style
-import styles from './PostListItem.css';
+import styles from './UniListItem.css';
 
-function PostListItem(props) {
+function UniListItem(props) {
   return (
     <div className={styles['single-post']}>
       <h3 className={styles['post-title']}>
@@ -18,7 +18,7 @@ function PostListItem(props) {
   );
 }
 
-PostListItem.propTypes = {
+UniListItem.propTypes = {
   post: PropTypes.shape({
     name: PropTypes.string.isRequired,
     country: PropTypes.string.isRequired,
@@ -28,4 +28,4 @@ PostListItem.propTypes = {
   onDelete: PropTypes.func.isRequired,
 };
 
-export default PostListItem;
+export default UniListItem;

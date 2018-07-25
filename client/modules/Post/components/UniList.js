@@ -1,14 +1,14 @@
 import React, { PropTypes } from 'react';
 
 // Import Components
-import PostListItem from './PostListItem/PostListItem';
+import UniListItem from './UniListItem/UniListItem';
 
-function PostList(props) {
+function UniList(props) {
   return (
     <div className="listView">
       {
         props.posts.map(post => (
-          <PostListItem
+          <UniListItem
             post={post}
             key={post.cuid}
             onDelete={() => props.handleDeletePost(post.cuid)}
@@ -19,7 +19,7 @@ function PostList(props) {
   );
 }
 
-PostList.propTypes = {
+UniList.propTypes = {
   posts: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     cuid: PropTypes.string.isRequired,
@@ -27,4 +27,4 @@ PostList.propTypes = {
   handleDeletePost: PropTypes.func.isRequired,
 };
 
-export default PostList;
+export default UniList;

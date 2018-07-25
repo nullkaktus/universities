@@ -1,18 +1,18 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
-import UniMap from '../../pages/PostDetailPage/UniMap';
+import UniMap from '../../pages/UniDetailPage/UniMap';
 
 // Import Style
-import styles from '../../components/PostListItem/PostListItem.css';
+import styles from '../../components/UniListItem/UniListItem.css';
 
 // Import Actions
-import { fetchPost } from '../../PostActions';
+import { fetchPost } from '../../UniActions';
 
 // Import Selectors
-import { getPost } from '../../PostReducer';
+import { getPost } from '../../UniReducer';
 
-export function PostDetailPage(props) {
+export function UniDetailPage(props) {
   return (
     <div>
       <Helmet title={props.post.name} />
@@ -33,7 +33,7 @@ export function PostDetailPage(props) {
 }
 
 // Actions required to provide data for this component to render in server side.
-PostDetailPage.need = [params => {
+UniDetailPage.need = [params => {
   return fetchPost(params.cuid);
 }];
 
@@ -44,7 +44,7 @@ function mapStateToProps(state, props) {
   };
 }
 
-PostDetailPage.propTypes = {
+UniDetailPage.propTypes = {
   post: PropTypes.shape({
     name: PropTypes.string.isRequired,
     country: PropTypes.string.isRequired,
@@ -54,4 +54,4 @@ PostDetailPage.propTypes = {
   }).isRequired,
 };
 
-export default connect(mapStateToProps)(PostDetailPage);
+export default connect(mapStateToProps)(UniDetailPage);
