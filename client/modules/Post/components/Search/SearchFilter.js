@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import Button from '@material-ui/core/Button';
 import Select from 'react-select';
+// first build with commented out css file. TODO: configure to fix initial built
 import 'react-select/dist/react-select.css';
 
 import { searchUniByCountry } from '../../PostActions';

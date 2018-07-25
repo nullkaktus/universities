@@ -33,7 +33,7 @@ export class App extends Component {
         {this.state.isMounted && process.env.NODE_ENV === 'development'}
         <div>
           <Helmet
-            title="MERN Universities"
+            title="Universities"
             titleTemplate="%s - App"
             meta={[
               { charset: 'utf-8' },
