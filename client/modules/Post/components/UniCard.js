@@ -20,9 +20,13 @@ const styles = {
 
 function UniCard(props) {
   const { classes } = props;
+  const style = {
+    display: 'inline-block',
+    float:  'left',
+  };
 
   return (
-    <div>
+    <div className="col m4" style={style} >
       <Card className={classes.card}>
         <CardMedia
           className={classes.media}
@@ -31,12 +35,9 @@ function UniCard(props) {
         />
         <CardContent>
           <Typography gutterBottom variant="headline" component="h2">
-            Lizard
+            {props.post.name}
           </Typography>
-          <Typography component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
-          </Typography>
+          <Typography component="p">{props.post.country}, {props.post.city}</Typography>
         </CardContent>
         <CardActions>
           <Button size="small" color="primary">
@@ -53,7 +54,13 @@ function UniCard(props) {
 
 
 UniCard.propTypes = {
-  classes: PropTypes.object.isRequired,
+  post: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    country: PropTypes.string.isRequired,
+    city: PropTypes.string.isRequired,
+    cuid: PropTypes.string.isRequired,
+  }).isRequired,
+  onDelete: PropTypes.func.isRequired,
 };
 
 export default withStyles(styles)(UniCard);

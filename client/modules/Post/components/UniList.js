@@ -1,14 +1,14 @@
 import React, { PropTypes } from 'react';
 
 // Import Components
-import UniListItem from './UniListItem/UniListItem';
+import UniCard from './UniCard';
 
 function UniList(props) {
   return (
     <div className="listView">
       {
         props.posts.map(post => (
-          <UniListItem
+          <UniCard
             post={post}
             key={post.cuid}
             onDelete={() => props.handleDeletePost(post.cuid)}
