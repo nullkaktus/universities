@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import UniMap from '../../pages/UniDetailPage/UniMap';
+import UniGridImages from '../../pages/UniDetailPage/UniGridImages';
 
 // Import Style
 import styles from '../../components/UniListItem/UniListItem.css';
@@ -18,15 +19,16 @@ export function UniDetailPage(props) {
       <Helmet title={props.post.name} />
       <div className={`${styles['single-post']} ${styles['post-detail']}`}>
         <h3 className={styles['post-title']}>{props.post.name}</h3>
+        <UniGridImages images={props.post} />
         <img src={props.post.img} alt="" className={styles['university-image']} />
         <p className={styles['author-name']}> {props.post.country}</p>
         <p className={styles['post-desc']}>{props.post.city}</p>
         <UniMap
-				  googleMapURL={`http://maps.google.com/maps/api/js?sensor=false`}
-				  loadingElement={<div style={{ height: `100%` }} />}
-				  containerElement={<div style={{ height: `600px`, width: `600px` }} />}
-				  mapElement={<div style={{ height: `100%` }} />}
-			/>
+          googleMapURL={`http://maps.google.com/maps/api/js?sensor=false`}
+          loadingElement={<div style={{ height: `100%` }} />}
+          containerElement={<div style={{ height: `600px`, width: `600px` }} />}
+          mapElement={<div style={{ height: `100%` }} />}
+        />
       </div>
     </div>
   );

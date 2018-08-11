@@ -1,4 +1,5 @@
 import React, { PropTypes, Component } from 'react';
+import { Link } from 'react-router';
 
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -34,9 +35,9 @@ function UniCard(props) {
           title="Contemplative Reptile"
         />
         <CardContent>
-          <Typography gutterBottom variant="headline" component="h2">
+          <Link to={`/posts/${props.post.cuid}`} >
             {props.post.name}
-          </Typography>
+          </Link>
           <Typography component="p">{props.post.country}, {props.post.city}</Typography>
         </CardContent>
         <CardActions>
