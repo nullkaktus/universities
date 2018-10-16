@@ -19,8 +19,7 @@ export function UniDetailPage(props) {
       <Helmet title={props.post.name} />
       <div className={`${styles['single-post']} ${styles['post-detail']}`}>
         <h3 className={styles['post-title']}>{props.post.name}</h3>
-        <UniGridImages images={props.post} />
-        <img src={props.post.img} alt="" className={styles['university-image']} />
+        <UniGridImages post={props.post} />
         <p className={styles['author-name']}> {props.post.country}</p>
         <p className={styles['post-desc']}>{props.post.city}</p>
         <UniMap
