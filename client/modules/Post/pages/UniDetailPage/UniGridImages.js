@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
-import tileData from './tileData';
+// import tileData from './tileData';
 
 const styles = theme => ({
   root: {
@@ -40,28 +40,30 @@ const styles = theme => ({
  *   },
  * ];
  */
+
 function UniGridImages(props) {
-  const { classes } = props;
+  // const { classes } = props;
 // not sure here what should be passed as props
-  return (
-    <div className={classes.root}>
-      <GridList cellHeight={160} className={classes.gridList} cols={3}>
-        {props.posts.map(tile => (
-          <GridListTile key={tile.img} cols={tile.cols || 1}>
-            <img src={tile.img} alt={tile.title} />
+  console.log(props);  
+return (
+    <div>
+      <GridList cellHeight={160} cols={3}>
+          <GridListTile key={props.post.img} cols={1}>
+            <img src={props.post.img} alt={props.post.name} />
           </GridListTile>
-        ))}
       </GridList>
     </div>
   );
 }
 
 UniGridImages.propTypes = {
-  classes: PropTypes.object.isRequired,
-  posts: PropTypes.arrayOf(PropTypes.shape({
-    img: PropTypes.string.isRequired,
+  post: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    country: PropTypes.string.isRequired,
+    city: PropTypes.string.isRequired,
     cuid: PropTypes.string.isRequired,
-  })).isRequired,
+    img: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default withStyles(styles)(UniGridImages);
