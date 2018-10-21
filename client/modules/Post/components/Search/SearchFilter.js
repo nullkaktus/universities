@@ -6,6 +6,8 @@ import Select from 'react-select';
 // first build with commented out css file. TODO: configure to fix initial built
 // import 'react-select/dist/react-select.css';
 
+import styles from './Search.css';
+
 import { searchUniByCountry } from '../../UniActions';
 
 class SearchFilter extends Component {
@@ -43,8 +45,8 @@ class SearchFilter extends Component {
 
   render() {
     return (
-      <div className="section">
-        <h3 className="section-heading">Pick a country:</h3>
+      <div className={styles['section']}>
+        <h3 className={styles['section-title']}>Pick a country:</h3>
         <Select
           value={this.state.selectValue}
           onChange={this.handleChange}
