@@ -1,0 +1,82 @@
+[
+    { "name": "ETH Zurich",
+    "country": "Switzerland",
+    "city": "Zurich",
+    "address": "Ramistrasse 101",
+    "cuid": "cikqgkv4q01ck7453ualdn3hd",
+    "images": [{
+      "img": "https://www.ethz.ch/en/news-and-events/eth-news/news/2018/05/new-professors/_jcr_content/imageCarousel.imageformat.carousel.1899489208.jpg",
+      "title": "Picture",
+      "author": "Author",
+      "cols": 2
+    }],
+    "slug": "eth-zuerich",
+    "history": "Here comes some history",
+    "departments": [{ "name": "Computer Science", "field": "Informatik" }, { "name": "Biological Computer Science", "field": "Bioinformatik" }],
+    "url": "https://www.ethz.ch/en.html"
+  },
+  { "name": "Agricultural University of Tirana",
+    "country": "Albania",
+    "city": "Tiranë",
+    "address": "Kodër Kamëz",
+    "cuid": "cikqgkv4q01ck7153ualdn3hd",
+    "images": [{
+      "img": "https://www.ethz.ch/en/news-and-events/eth-news/news/2018/05/new-professors/_jcr_content/imageCarousel.imageformat.carousel.1899489208.jpg",
+      "title": "Picture",
+      "author": "Author",
+      "cols": 2
+    }],
+    "slug": "agricultural-tirana",
+    "history": "Founded 1951 as the Higher Agricultural Institute. Acquired present status 1991.",
+    "departments": [{ "name": "Agriculture", "field": "Agriculture field" }],
+    "url": "https://www.ethz.ch/en.html"
+  },
+  { "name": "Yerevan Agricultural University",
+    "country": "Armenia",
+    "city": "Yerevan",
+    "address": "Futchiki 27/5",
+    "cuid": "cikqfhv4q01ck7453ualdn3hd",
+    "images": [{
+      "img": "https://www.ethz.ch/en/news-and-events/eth-news/news/2018/05/new-professors/_jcr_content/imageCarousel.imageformat.carousel.1899489208.jpg",
+      "title": "Picture",
+      "author": "Author",
+      "cols": 2
+    }],
+    "slug": "yerevan-agriculture",
+    "history": "Founded 1992.",
+    "departments": [{ "name": "Agriculture", "field": "Agriculture field" }],
+    "url": "http://www.yau.am"
+  },
+  { "name": "University of Vienna",
+    "country": "Austria",
+    "city": "Vienna",
+    "address": "Universitätsring 1",
+    "cuid": "cikqfhv4q01dl7453ualdn3hd",
+    "images": [{
+      "img": "https://www.ethz.ch/en/news-and-events/eth-news/news/2018/05/new-professors/_jcr_content/imageCarousel.imageformat.carousel.1899489208.jpg",
+      "title": "Picture",
+      "author": "Author",
+      "cols": 2
+    }],
+    "slug": "vienna-university",
+    "history": "Founded 1365. Reorganized 1377, 1384 and 1850 and 2004. A State institution under the jurisdiction of the Federal Ministry of Education, Science and Culture.",
+    "departments": [{ "name": "Literature", "field": "Austrian literature" }, { "name": "Medicine", "field": "Pediatry" }],
+    "url": "http://www.univie.ac.at"
+  },
+  { "name": "National Art School of Lyon",
+    "country": "Lyon",
+    "city": "France",
+    "address": "Universitätsring 1",
+    "cuid": "cikqfhv4q01dl7453uswdn3hd",
+    "images": [{
+      "img": "8 bis quai St Vincent",
+      "title": "Picture",
+      "author": "Author",
+      "cols": 2
+    }],
+    "slug": "vienna-university",
+    "history": "Founded 1756 as Ecole Royale Académique de Dessin et Géométrie. Became the Ecole Nationale des Beaux-Arts 1848.",
+    "departments": [{ "name": "Sculpture", "field": "Sculpture" }, { "name": "History of Art", "field": "History of Art" }],
+    "url": "http://www.ensba-lyon.fr"
+  }
+  ]

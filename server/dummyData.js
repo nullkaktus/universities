@@ -1,5 +1,7 @@
 import University from './models/university';
-const data = [
+import data from './data.json';
+
+/* const data = [
   { name: 'ETH Zurich',
   country: 'Switzerland',
   city: 'Zurich',
@@ -17,7 +19,7 @@ const data = [
   url: 'https://www.ethz.ch/en.html',
 },
 
-];
+];*/
 
 export default function () {
   University.count().exec((err, count) => {
