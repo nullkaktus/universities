@@ -3,9 +3,12 @@ import React, { PropTypes } from 'react';
 // Import Components
 import UniCard from './UniCard';
 
+// Import Style
+import styles from './UniList.css';
+
 function UniList(props) {
   return (
-    <div className="listView">
+    <div className={styles['card-list']}>
       {
         props.posts.map(post => (
           <UniCard

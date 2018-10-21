@@ -27,7 +27,7 @@ function UniCard(props) {
   };
 
   return (
-    <div className="col m4" style={style} >
+    <div >
       <Card className={classes.card}>
         <CardMedia
           className={classes.media}
