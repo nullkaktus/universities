@@ -17,5 +17,8 @@ router.route('/posts/:cuid').delete(PostController.deleteUniversity);
 // Show unis by country
 router.route('/posts/:country').get(PostController.getUniByCountry);
 
+//fetch all countries
+router.route('/countries').get(PostController.getCountries);
+
 
 export default router;

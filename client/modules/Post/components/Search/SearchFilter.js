@@ -8,18 +8,29 @@ import Select from 'react-select';
 
 import styles from './Search.css';
 
-import { searchUniByCountry } from '../../UniActions';
+import { fetchCountries, searchUniByCountry } from '../../UniActions';
+import { getCountries, getPostCountry } from '../../UniReducer';
 
 class SearchFilter extends Component {
 
   constructor(props) {
     super(props);
     this.state = { selectValue: '',
-      clearable: true };
+      clearable: true,
+    };
 
+    //TODO posts or options or countries?
+    this.options = this.props.countries;
+    console.log("Countries: ");
+    console.log(this.options);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  componentDidMount() {
+    this.props.dispatch(fetchCountries());
+  }
+
 
   handleChange= (selectValue) => {
 // Attention: checking for null because of "clearable" option
@@ -51,13 +62,7 @@ class SearchFilter extends Component {
           value={this.state.selectValue}
           onChange={this.handleChange}
           onSelectResetsInput={false}
-          options={[
-            { value: '', label: '' },
-            { value: 'Switzerland', label: 'Switzerland' },
-            { value: 'Russia', label: 'Russia' },
-            { value: 'Andorra', label: 'Andorra' },
-            { value: 'Albania', label: 'Albania' },
-          ]}
+          options={this.options}
           clearable={this.state.clearable}
         />
         <Button variant="raised" color="primary" onClick={this.handleSubmit}>
@@ -68,10 +73,23 @@ class SearchFilter extends Component {
   }
 }
 
+// Actions required to provide data for this component to render in sever side.
+SearchFilter.need = [() => { return fetchCountries(); }];
+
+// Retrieve data from store as props
+function mapStateToProps(state) {
+  return {
+    countries: getCountries(state),
+  };
+}
+
 
 SearchFilter.propTypes = {
   dispatch: PropTypes.func.isRequired,
   onSelectCountry: PropTypes.func,
+  countries: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  })).isRequired,
 };
 
-export default connect(null)(SearchFilter);
+export default connect(mapStateToProps)(SearchFilter);

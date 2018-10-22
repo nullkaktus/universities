@@ -17,6 +17,21 @@ export function getUniversities(req, res) {
   });
 }
 
+/**
+ * Get all countries
+ * @param req
+ * @param res
+ * @returns void
+ */
+export function getCountries(req, res) {
+  University.find().distinct('country').exec((err, countries) => {
+    if (err) {
+      res.status(500).send(err);
+    }
+    res.json({ countries });
+  });
+}
+
 // Not checked if it is working
 /**
  * Get universities by country
