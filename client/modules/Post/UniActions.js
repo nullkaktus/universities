@@ -4,7 +4,7 @@ import callApi from '../../util/apiCaller';
 export const ADD_POST = 'ADD_POST';
 export const ADD_POSTS = 'ADD_POSTS';
 export const DELETE_POST = 'DELETE_POST';
-export const ADD_COUNTRIES = 'ADD_COUNTRIES';
+//export const ADD_COUNTRIES = 'ADD_COUNTRIES';
 
 // Export Actions
 export function addPost(post) {
@@ -34,13 +34,13 @@ export function addPosts(posts) {
     posts,
   };
 }
-
-export function addCountries(posts) {
+/*
+export function addCountries(countries) {
   return {
     type: ADD_COUNTRIES,
-    posts,
+    countries,
   };
-}
+}*/
 
 export function fetchPosts() {
   return (dispatch) => {
@@ -50,15 +50,17 @@ export function fetchPosts() {
   };
 }
 
+/*
 export function fetchCountries() {
   return (dispatch) => {
     return callApi('countries').then(res => {
       dispatch(addCountries(res.countries));
       console.log("UniActions: " + res.countries);
+      return res.countries;
     });
   };
 }
-
+*/
 
 export function fetchPost(cuid) {
   return (dispatch) => {

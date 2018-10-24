@@ -12,7 +12,7 @@ import { toggleAddPost } from '../../../App/AppActions';
 
 // Import Selectors
 import { getShowAddPost } from '../../../App/AppReducer';
-import { getPosts, getPostCountry } from '../../UniReducer';
+import { getPosts } from '../../UniReducer';
 // !! imported selector from PostReducer here. Probably can use it to select universities by country. Not yet implemented.
 
 class UniListPage extends Component {

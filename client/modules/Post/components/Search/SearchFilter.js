@@ -8,27 +8,31 @@ import Select from 'react-select';
 
 import styles from './Search.css';
 
-import { fetchCountries, searchUniByCountry } from '../../UniActions';
-import { getCountries, getPostCountry } from '../../UniReducer';
+import { fetchCountries } from '../../CountryActions';
+import { getCountries } from '../../CountryReducer';
 
 class SearchFilter extends Component {
+  
+  componentDidMount() {
+    console.log("componentDidMount " + "fetchCountries");
+    this.props.dispatch(fetchCountries());
+  }
 
   constructor(props) {
     super(props);
     this.state = { selectValue: '',
       clearable: true,
     };
-
     //TODO posts or options or countries?
-    this.options = this.props.countries;
-    console.log("Countries: ");
-    console.log(this.options);
+    //this.options = this.props.countries;
+    //this.countr = this.props.countries;
+    //console.log(this.options);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount() {
-    this.props.dispatch(fetchCountries());
+  componentWillReceiveProps(nextProps) {
+    this.setState({ countries: nextProps.data });  
   }
 
 
@@ -55,6 +59,8 @@ class SearchFilter extends Component {
   }
 
   render() {
+    console.log("Countries: ");
+    console.log(this.countries);
     return (
       <div className={styles['section']}>
         <h3 className={styles['section-title']}>Pick a country:</h3>
@@ -62,7 +68,7 @@ class SearchFilter extends Component {
           value={this.state.selectValue}
           onChange={this.handleChange}
           onSelectResetsInput={false}
-          options={this.options}
+          options={this.countries}
           clearable={this.state.clearable}
         />
         <Button variant="raised" color="primary" onClick={this.handleSubmit}>
@@ -78,18 +84,20 @@ SearchFilter.need = [() => { return fetchCountries(); }];
 
 // Retrieve data from store as props
 function mapStateToProps(state) {
+  console.log("mapStateToProps");
+  console.log(state);
   return {
     countries: getCountries(state),
   };
 }
 
-
+/*
 SearchFilter.propTypes = {
   dispatch: PropTypes.func.isRequired,
   onSelectCountry: PropTypes.func,
   countries: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
   })).isRequired,
-};
+}; */
 
 export default connect(mapStateToProps)(SearchFilter);
