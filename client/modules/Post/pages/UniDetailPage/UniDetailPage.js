@@ -21,7 +21,8 @@ export function UniDetailPage(props) {
         <h3 className={styles['post-title']}>{props.post.name}</h3>
         <UniGridImages post={props.post} />
         <p className={styles['author-name']}> {props.post.country}</p>
-        <p className={styles['post-desc']}>{props.post.city}</p>
+        <p className={styles['post-desc']}>{props.post.city}, {props.post.address}</p>
+        <p className={styles['post-desc']}>{props.post.history}</p>
         <UniMap
           googleMapURL={`http://maps.google.com/maps/api/js?sensor=false`}
           loadingElement={<div style={{ height: `100%` }} />}

@@ -44,13 +44,15 @@ const styles = theme => ({
 function UniGridImages(props) {
   // const { classes } = props;
 // not sure here what should be passed as props
-  console.log(props);  
+ // console.log(props);  
 return (
     <div>
       <GridList cellHeight={160} cols={3}>
-          <GridListTile key={props.post.img} cols={1}>
-            <img src={props.post.img} alt={props.post.name} />
+        {props.post.images.map(tile => (
+          <GridListTile key={tile.img} cols={tile.cols || 1}>
+            <img src={tile.img} alt={tile.title} />
           </GridListTile>
+        ))}
       </GridList>
     </div>
   );
