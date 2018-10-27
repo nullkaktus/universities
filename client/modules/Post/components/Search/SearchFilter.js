@@ -8,14 +8,14 @@ import Select from 'react-select';
 
 import styles from './Search.css';
 
-import { fetchCountries } from '../../CountryActions';
+import { fetchCountriesForDropdown } from '../../CountryActions';
 import { getCountries } from '../../CountryReducer';
 
 class SearchFilter extends Component {
   
   componentDidMount() {
-    console.log("componentDidMount " + "fetchCountries");
-    this.props.dispatch(fetchCountries());
+   // console.log("componentDidMount " + "fetchCountriesForDropdown");
+    this.props.dispatch(fetchCountriesForDropdown());
   }
 
   constructor(props) {
@@ -25,16 +25,15 @@ class SearchFilter extends Component {
     };
     //TODO posts or options or countries?
     //this.options = this.props.countries;
-    //this.countr = this.props.countries;
-    //console.log(this.options);
+    this.countr = this.props.countries;
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
+/*
   componentWillReceiveProps(nextProps) {
-    this.setState({ countries: nextProps.data });  
+    this.setState({ countries: nextProps.countr });  
   }
-
+*/
 
   handleChange= (selectValue) => {
 // Attention: checking for null because of "clearable" option
@@ -59,8 +58,7 @@ class SearchFilter extends Component {
   }
 
   render() {
-    console.log("Countries: ");
-    console.log(this.countries);
+    this.countr = this.props.countries;
     return (
       <div className={styles['section']}>
         <h3 className={styles['section-title']}>Pick a country:</h3>
@@ -68,7 +66,7 @@ class SearchFilter extends Component {
           value={this.state.selectValue}
           onChange={this.handleChange}
           onSelectResetsInput={false}
-          options={this.countries}
+          options={this.countr}
           clearable={this.state.clearable}
         />
         <Button variant="raised" color="primary" onClick={this.handleSubmit}>
@@ -80,14 +78,17 @@ class SearchFilter extends Component {
 }
 
 // Actions required to provide data for this component to render in sever side.
-SearchFilter.need = [() => { return fetchCountries(); }];
+SearchFilter.need = [() => { return fetchCountriesForDropdown(); }];
 
 // Retrieve data from store as props
 function mapStateToProps(state) {
-  console.log("mapStateToProps");
+  console.log("mapStateToProps state");
   console.log(state);
+  const countries = getCountries(state);
+  console.log("mapStateToProps countries");
+  console.log(countries);
   return {
-    countries: getCountries(state),
+    countries,
   };
 }
 

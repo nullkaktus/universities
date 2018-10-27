@@ -9,12 +9,22 @@ export function addCountries(countries) {
   };
 }
 
-export function fetchCountries() {
+export function fetchCountriesForDropdown() {
     return (dispatch) => {
       return callApi('countries').then(res => {
         console.log("fetchCountries dispatch res: ");
-        console.log(res);
-        dispatch(addCountries(res.countries));
+        var data = [];
+        for (var i in res.countries) {    
+
+          var item = res.countries[i];   
+      
+          data.push({ 
+              "value" : item,
+              "label"  : item,
+          });
+      }
+        console.log(data);
+        dispatch(addCountries(data));
         //console.log("CountryActions: " + res.countries);
         //return res.countries;
       });

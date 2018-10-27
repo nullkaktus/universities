@@ -17,7 +17,7 @@ const CountryReducer = (state = initialState, action) => {
 
 //Get all countries
 //TODO posts or options?
-export const getCountries = state => state.countries;
+export const getCountries = state => state.countr.data;
 
 // Export Reducer
 export default CountryReducer;
