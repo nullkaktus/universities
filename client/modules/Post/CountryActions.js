@@ -12,7 +12,6 @@ export function addCountries(countries) {
 export function fetchCountriesForDropdown() {
     return (dispatch) => {
       return callApi('countries').then(res => {
-        console.log("fetchCountries dispatch res: ");
         var data = [];
         for (var i in res.countries) {    
 
@@ -23,7 +22,6 @@ export function fetchCountriesForDropdown() {
               "label"  : item,
           });
       }
-        console.log(data);
         dispatch(addCountries(data));
         //console.log("CountryActions: " + res.countries);
         //return res.countries;

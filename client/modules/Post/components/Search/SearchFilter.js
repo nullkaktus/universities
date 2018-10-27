@@ -10,6 +10,7 @@ import styles from './Search.css';
 
 import { fetchCountriesForDropdown } from '../../CountryActions';
 import { getCountries } from '../../CountryReducer';
+import { object } from 'prop-types';
 
 class SearchFilter extends Component {
   
@@ -20,8 +21,7 @@ class SearchFilter extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { selectValue: '',
-      clearable: true,
+    this.state = { selectValue: null,
     };
     //TODO posts or options or countries?
     //this.options = this.props.countries;
@@ -35,15 +35,18 @@ class SearchFilter extends Component {
   }
 */
 
-  handleChange= (selectValue) => {
+  handleChange= (selectValue, actionMeta) => {
 // Attention: checking for null because of "clearable" option
+    console.log("Action-meta:");
+//TODO: in case of Multi it is an array that should be correctly read
+    console.log(selectValue);
     const value = selectValue === null ? '' : selectValue.value;
-    this.setState({ selectValue: value });
+    this.setState({ selectValue });
     // selectedOption can be null when the `x` (close) button is clicked
     if (value) {
       console.log(`Selected: ${value}`);
     }
-    console.log(value);
+    console.log("Selected: " + value);
     this.props.onSelectCountry(value);
   }
 
@@ -58,20 +61,18 @@ class SearchFilter extends Component {
   }
 
   render() {
+    const { selectValue } = this.state;
     this.countr = this.props.countries;
     return (
       <div className={styles['section']}>
         <h3 className={styles['section-title']}>Pick a country:</h3>
         <Select
-          value={this.state.selectValue}
+          value={selectValue}
           onChange={this.handleChange}
-          onSelectResetsInput={false}
           options={this.countr}
-          clearable={this.state.clearable}
+          isClearable
+          isMulti
         />
-        <Button variant="raised" color="primary" onClick={this.handleSubmit}>
-          Search
-        </Button>
       </div>
     );
   }
@@ -82,11 +83,7 @@ SearchFilter.need = [() => { return fetchCountriesForDropdown(); }];
 
 // Retrieve data from store as props
 function mapStateToProps(state) {
-  console.log("mapStateToProps state");
-  console.log(state);
   const countries = getCountries(state);
-  console.log("mapStateToProps countries");
-  console.log(countries);
   return {
     countries,
   };
